@@ -1,0 +1,13 @@
+To prep and compile sample2.sqc in Mac.  Assume that you have all your file in a directory p3 in your Db2 Container home directory (e.g. /database/config/db2inst1/p3 ) Issue the following command in the Db2 Container Window:
+
+DB2 Connect to Sample
+
+DB2 Prep sample2.sqc
+
+gcc -I../sqllib/include -c sample2.c
+
+gcc -o sample2 sample2.o -L../sqllib/lib  -ldb2
+
+If successful, you will get the file sample2 (executable), run it by:
+
+./sample2 sample
